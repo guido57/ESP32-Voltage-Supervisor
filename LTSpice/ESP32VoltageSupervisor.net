@@ -1,0 +1,19 @@
+* Z:\home\guido\Github\VoltageSupervisor\ESP32VoltageSupervisor.asc
+Q1 N002 N004 0 0 BC182B
+V1 N001 0 PULSE(0 3.3 0 0.02 0.01 0.01 2)
+R1 N001 N002 100K
+Q2 RESETN N003 0 0 BC182B
+R3 N001 RESETN 15K
+R5 N003 N002 220K
+R4 N001 N004 68K
+R2 N004 P001 3.3K
+D1 P001 0 1N4148
+.model D D
+.lib C:\users\guido\My Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\guido\My Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 30m
+.TEMP 0 20 40 60
+.backanno
+.end
